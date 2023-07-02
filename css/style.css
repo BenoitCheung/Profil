@@ -357,6 +357,8 @@ header {
 .service {
 	max-width: 500px;
 	margin: auto;
+	margin-top: 0;
+
 }
 
 @media (min-width: 1200px) {
@@ -378,7 +380,7 @@ header {
 
 .year {
 	text-align: left;
-	width: 200px;
+	width: 300px;
 	margin: 20px;
 	font-size: 1.15rem;
 }
@@ -485,6 +487,37 @@ header {
 	margin-bottom: 30px;
 }
 
+li>div {
+	position: relative;
+  display: flex;
+  align-items: center;
+}
+
+li>div::before {
+  content: "";
+  background-size: 22px 22px;
+  width: 22px;
+  height: 22px;
+  display: inline-block;
+  position: relative;
+}
+
+#fr::before {
+	background-image: url(../img/fr.webp)
+}
+
+#gb::before {
+	background-image: url(../img/gb.webp)
+}
+
+#es::before {
+	background-image: url(../img/es.webp)
+}
+
+#tr::before {
+	background-image: url(../img/tr.webp)
+}
+
 .bar .progress-line {
 	position: relative;
 	height: 10px;
@@ -553,13 +586,13 @@ header {
 	width: 100%;
 }
 .progress-line.en span{
-	width: 85%;
+	width: 75%;
 }
 .progress-line.es span{
 	width: 50%;
 }
 .progress-line.tr span{
-	width: 30%;
+	width: 20%;
 }
 .progress-line.cn span{
 	width: 15%;
@@ -575,7 +608,7 @@ header {
 	content: "B1";
 }
 .progress-line.tr span::after{
-	content: "A2";
+	content: "A1";
 }
 .progress-line.cn span::after{
 	content: "A1";
